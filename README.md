@@ -3,7 +3,7 @@ Certified for the a 33-hours course by Maktabkhooneh. https://maktabkhooneh.org/
 ## 1. Tehran Apartment Price Prediction
 This project is a machine learning model aimed at predicting apartment prices in Tehran based on real estate data. With approximately 4,000 real-world apartment listings, the dataset includes features like area, number of rooms, presence of amenities, and location. The objective is to predict apartment prices in Iranian Rial (IRR) or USD.
 
-* Dataset
+*Dataset*  
 The dataset, stored in housePrice.csv, contains the following columns:
 
 Area: Area of the apartment in square meters.
