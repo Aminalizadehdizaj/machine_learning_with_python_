@@ -27,7 +27,7 @@ This analysis focuses on preparing data for both linear and multiple regression 
   - For **Multiple Regression**, rows with missing "Address" values are removed to create a refined dataset.
 - **DataFrames**:
   - `df`: Used for linear regression, preserving all rows with valid data.
-  - `df2`: Used for multiple regression, focusing on complete rows with no missing "Address" values.
+  - `df2`: Used for multiple regression, focusing on complete rows with no missing "Address" values.  
 file: https://github.com/Aminalizadehdizaj/machine_learning_with_python_/blob/main/housePrice.csv  
 ---
 
@@ -56,7 +56,8 @@ This notebook explores the performance of several classification models on a dat
   - Confusion Matrix
 
 ### Results
-The **Random Forest Classifier** stands out as the most effective model, offering high accuracy and a balanced error rate.
+The **Random Forest Classifier** stands out as the most effective model, offering high accuracy and a balanced error rate.  
+File: https://github.com/Aminalizadehdizaj/machine_learning_with_python_/blob/main/heart.csv
 
 ---
 
