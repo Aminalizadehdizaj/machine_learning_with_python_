@@ -1,40 +1,101 @@
-# machine_learning_with_python_
-Certified for the a 33-hours course by Maktabkhooneh. https://maktabkhooneh.org/course/%DB%8C%D8%A7%D8%AF%DA%AF%DB%8C%D8%B1%DB%8C-%D9%85%D8%A7%D8%B4%DB%8C%D9%86-%D9%BE%D8%A7%DB%8C%D8%AA%D9%88%D9%86-mk1318/  
-## 1. Tehran Apartment Price Prediction
-This project is a machine learning model aimed at predicting apartment prices in Tehran based on real estate data. With approximately 4,000 real-world apartment listings, the dataset includes features like area, number of rooms, presence of amenities, and location. The objective is to predict apartment prices in Iranian Rial (IRR) or USD.
+# Machine Learning Models - Regression, Classification, and Clustering
 
-*Dataset*  
-The dataset, stored in housePrice.csv, contains the following columns:
+This repository contains a series of machine learning analyses that demonstrate different techniques for data processing and modeling. The three primary models covered are Regression, Classification, and Clustering, each with its own focus and methodology for extracting insights from data.
 
-Area: Area of the apartment in square meters.
-Room: Number of bedrooms.
-Parking: Whether the apartment has parking (0 or 1).
-Warehouse: Whether the apartment has a storage area (0 or 1).
-Elevator: Whether the apartment has an elevator (0 or 1).
-Address: Approximate location within Tehran.
-Price (IRR): Price in Iranian Rial.
-Price (USD): Price in US Dollars.
-Data Preparation
-Data Type Conversion: Boolean features (Parking, Warehouse, Elevator) are converted to integer types for compatibility. Area is cleaned to remove any formatting issues (e.g., commas) and converted to integer type.
+Certified for the 33-hour course by [Maktabkhooneh](https://maktabkhooneh.org/course/%DB%8C%D8%A7%D8%AF%DA%AF%DB%8C%D8%B1%DB%8C-%D9%85%D8%A7%D8%B4%DB%8C%D9%86-%D9%BE%D8%A7%DB%8C%D8%AA%D9%88%D9%86-mk1318/).
 
-Outlier Detection: Unusually large values in the Area column (values above 2000) are identified as potential outliers.
+---
 
-Handling Missing Values:
+## Table of Contents
 
-Rows with missing values in the Address column are excluded, creating a secondary dataset (df2) for models requiring complete data across all features.
-Encoding Categorical Data: The Address column is label-encoded to transform the location information into numerical values, specifically for multiple regression analysis.
+1. [Regression Analysis](#regression-analysis)
+2. [Classification Models](#classification-models)
+3. [Clustering Techniques](#clustering-techniques)
+4. [Requirements](#requirements)
+5. [Usage](#usage)
+6. [License](#license)
 
-Machine Learning Objectives
-Single-Feature Models: Use selected features to predict prices, testing individual relationships.
-Multiple Regression Analysis: Utilize df2 for a full-feature regression model, predicting price using all attributes.
-Dependencies
-Python Libraries: pandas, matplotlib, sklearn
-To install the required libraries, run:
+---
 
-bash
-Copy code
-pip install pandas matplotlib scikit-learn
-Usage
-Load and explore the dataset using pandas.
-Clean and preprocess the data following the steps outlined in the notebook.
-Train regression models to predict apartment prices in Tehran based on selected features.
+## Regression Analysis
+
+### Objective
+This analysis focuses on preparing data for both linear and multiple regression analysis. The dataset includes features with missing values, particularly in the "Address" column, which is handled differently for each type of regression.
+
+### Steps
+- **Data Preparation**: Missing values in the "Address" column are addressed:
+  - For **Linear Regression**, all available rows with valid data are retained in the dataset.
+  - For **Multiple Regression**, rows with missing "Address" values are removed to create a refined dataset.
+- **DataFrames**:
+  - `df`: Used for linear regression, preserving all rows with valid data.
+  - `df2`: Used for multiple regression, focusing on complete rows with no missing "Address" values.
+
+---
+
+## Classification Models
+
+### Objective
+This notebook explores the performance of several classification models on a dataset. The aim is to evaluate and compare the effectiveness of various machine learning algorithms based on multiple metrics.
+
+### Steps
+- **Preprocessing**:
+  - **Data Cleaning**: Missing or invalid values are handled to ensure high data quality.
+  - **Feature Selection**: Relevant features are chosen for model training.
+  - **Data Splitting**: The dataset is split into training and testing subsets for model evaluation.
+  - **Normalization/Scaling**: Features are scaled to improve the performance of certain algorithms.
+- **Algorithms Tested**:
+  - Gradient Boosting Classifier
+  - Logistic Regression
+  - Support Vector Machine (SVM)
+  - Decision Tree Classifier
+  - Random Forest Classifier
+- **Evaluation Metrics**:
+  - Accuracy Score
+  - Jaccard Index
+  - Log Loss
+  - F1-Score
+  - Confusion Matrix
+
+### Results
+The **Random Forest Classifier** stands out as the most effective model, offering high accuracy and a balanced error rate.
+
+---
+
+## Clustering Techniques
+
+### Objective
+This analysis uses three popular clustering algorithms—K-Means, Hierarchical Clustering, and DBSCAN—on a customer dataset containing demographic and behavioral features such as age, income, and spending score.
+
+### Steps
+- **Data Preprocessing**:
+  - **Categorical Encoding**: The "Gender" feature is transformed into numeric values using LabelEncoder.
+  - **Standardization**: Features are standardized using StandardScaler to ensure consistency in clustering.
+  
+- **Algorithms Tested**:
+  - **K-Means Clustering**:
+    - Optimal clusters are identified using the Elbow Method, leading to 5 clusters.
+    - Customers are grouped based on annual income, spending score, and other features.
+  
+  - **Hierarchical Clustering**:
+    - Agglomerative clustering with 5 clusters is applied using the "Ward" linkage method.
+    - The structure of clusters is visualized without pre-specifying the number of clusters.
+  
+  - **DBSCAN**:
+    - DBSCAN is used for density-based clustering, with 25 points identified as outliers.
+  
+### Visualization
+- Scatter plots are used to visualize the clusters generated by each algorithm, such as **Annual Income vs Spending Score** and **Age vs Spending Score**.
+
+### Insights
+The clustering techniques uncover meaningful patterns in customer behavior, segmenting them into distinct groups for targeted business strategies.
+
+---
+
+## Requirements
+
+To run the notebooks, you will need the following Python libraries:
+- pandas
+- numpy
+- scikit-learn
+- matplotlib
+- seaborn
