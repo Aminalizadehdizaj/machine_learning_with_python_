@@ -12,8 +12,7 @@ Certified for the 33-hour course by [Maktabkhooneh](https://maktabkhooneh.org/co
 2. [Classification Models](#classification-models)
 3. [Clustering Techniques](#clustering-techniques)
 4. [Requirements](#requirements)
-5. [Usage](#usage)
-6. [License](#license)
+
 
 ---
 
