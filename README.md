@@ -29,7 +29,7 @@ This analysis focuses on preparing data for both linear and multiple regression 
   - `df`: Used for linear regression, preserving all rows with valid data.
   - `df2`: Used for multiple regression, focusing on complete rows with no missing "Address" values.  
 
-### file  
+### File  
 
 - https://github.com/Aminalizadehdizaj/machine_learning_with_python_/blob/main/housePrice.csv
 ---
@@ -62,7 +62,7 @@ This notebook explores the performance of several classification models on a dat
 The **Random Forest Classifier** stands out as the most effective model, offering high accuracy and a balanced error rate.  
 
 ### File  
-https://github.com/Aminalizadehdizaj/machine_learning_with_python_/blob/main/heart.csv
+- https://github.com/Aminalizadehdizaj/machine_learning_with_python_/blob/main/heart.csv
 
 ---
 
@@ -95,7 +95,7 @@ This analysis uses three popular clustering algorithms—K-Means, Hierarchical C
 The clustering techniques uncover meaningful patterns in customer behavior, segmenting them into distinct groups for targeted business strategies.  
 
 ### File  
-https://github.com/Aminalizadehdizaj/machine_learning_with_python_/blob/main/Clustering_Cust.csv
+- https://github.com/Aminalizadehdizaj/machine_learning_with_python_/blob/main/Clustering_Cust.csv
 
 ---
 
