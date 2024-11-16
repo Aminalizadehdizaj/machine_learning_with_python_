@@ -30,7 +30,8 @@ This analysis focuses on preparing data for both linear and multiple regression 
   - `df2`: Used for multiple regression, focusing on complete rows with no missing "Address" values.  
 
 ### file  
-https://github.com/Aminalizadehdizaj/machine_learning_with_python_/blob/main/housePrice.csv  
+
+- https://github.com/Aminalizadehdizaj/machine_learning_with_python_/blob/main/housePrice.csv
 ---
 
 ## Classification Models
@@ -60,7 +61,7 @@ This notebook explores the performance of several classification models on a dat
 ### Results
 The **Random Forest Classifier** stands out as the most effective model, offering high accuracy and a balanced error rate.  
 
-###File  
+### File  
 https://github.com/Aminalizadehdizaj/machine_learning_with_python_/blob/main/heart.csv
 
 ---
